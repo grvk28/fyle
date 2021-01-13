@@ -96,6 +96,23 @@ color: #747474;">Design & Development loremdolor sit<br> amet, consetetur sadips
 opacity: 1;"onclick="myFunction()" id="myBtn">See All Categories</button></center></span>
 
 <script src="myscripts.js"></script>
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    btnText.innerHTML = "Hide Categories"; 
+    
+  } else {
+    moreText.style.display = "none";
+    btnText.innerHTML = "See All Categories"; 
+    
+  }
+}
+</script>
 </div>
 </nav>
 
