@@ -1,442 +1,388 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-  <title>Dreamjob.</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./img/download.png" type="image/x-icon">
-  <link rel="stylesheet" href="Style.css">
+    <title>Dreamjob.</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="./img/download.png" type="image/x-icon" />
+    <link rel="stylesheet" href="Style.css" />
 </head>
 
-
-
 <body>
-  <div class="navbar">
+    <div class="banner">
+        <div class="navbar">
+            <ul class="navlinks">
+                <a class="megaicon">DREAMJOB.</a>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Job Seekers</a></li>
+                <li><a href="#">Post a Job</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
 
-    <ul class="navlinks">
-      <a class="megaicon">DREAMJOB.</a>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Job Seekers</a></li>
-      <li><a href="#">Post a Job</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
+            <div class="navbtns">
+                <a class="navbtn light">Sign In </a>
+                <a class="navbtn dark">Free Trial</a>
+            </div>
+        </div>
+        <div class="content">
+            <img src="./img/wave.svg" />
+            <h1>DREAM JOBS Waiting For You!</h1>
+            <p>
+                Search and find your dream job is now easier than ever. Just browse a job and apply if your need to.
+            </p>
 
-    <div class="navbtns">
-      <a class="navbtn light">Sign In </a>
-      <a class="navbtn dark">Free Trial</a>
+            <a class="btn" href="#">Get Started</a>
+        </div>
+
+        <div class="companies">
+            <img src="./img/companies.svg" />
+        </div>
     </div>
-  </div>
 
-  <div class="banner">
-    <img src="./img/wave.svg" class="s1i1"><br />
+    <div class="categories">
+        <h2>Browse Jobs By Category</h2>
 
-    <h1>
-      DREAM JOBS <br />
+        <div class="cards-container">
+            <a href="#">
+                <div class="card">
+                    <div class="anchor anchor-blue">
+                        <img class="anchor-icon" src="./img/001-vector-design.svg" />
+                    </div>
+                    <h3>
+                        Design & <br /> Development
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
 
-      Waiting For You!<br />
+            <a href="#">
+                <div class="card">
+                    <div class="anchor anchor-red">
+                        <img class="anchor-icon" src="./img/002-flask.svg" />
+                    </div>
+                    <h3>
+                        Science & <br /> Technologies
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
 
-    </h1>
-    <p class="s1p1">Search and find your dream
-      job
-      is now easier than ever.<br />
-      Just browse a job and apply if your need to.
-    </p>
+            <a href="#">
+                <div class="card">
+                    <div class="anchor anchor-yellow">
+                        <img class="anchor-icon" src="./img/004-desk.svg" />
+                    </div>
+                    <h3>
+                        Office <br /> Administrative
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
 
-    <a class="btn">Get Started</a>
+            <a href="#">
+                <div class="card">
+                    <div class="anchor anchor-yellow">
+                        <img class="anchor-icon" src="./img/003-office-building.svg" />
+                    </div>
+                    <h3>
+                        Property <br /> Development
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
 
-    <div class="companies">
-      <img src="./img/companies.svg">
+            <a href="#">
+                <div class="card">
+                    <div class="anchor anchor-blue">
+                        <img class="anchor-icon" src="./img/006-briefcase.svg" />
+                    </div>
+                    <h3>
+                        Business <br /> Development
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="card">
+                    <div class="anchor anchor-red">
+                        <img class="anchor-icon" src="./img/005-clipboard.svg" />
+                    </div>
+                    <h3>
+                        Admin & <br /> Accountant
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" id="more">
+                <div class="card hidden">
+                    <div class="anchor anchor-red">
+                        <img class="anchor-icon" src="./img/005-clipboard.svg" />
+                    </div>
+                    <h3>
+                        Design & <br /> Development
+                    </h3>
+                    <p>
+                        Design & Development loremdolor sit<br /> amet, consetetur sadipscing elitr, sed<br /> diam nonumy.
+                    </p>
+                </div>
+            </a>
+
+            <div id="expand">
+                <a class="btn" onclick="toggleCategories()">See All Categories</a>
+            </div>
+
+            <script>
+                var extraCard = document.querySelector("#more > .card");
+                var expandBtn = document.querySelector("#expand > a");
+
+                function toggleCategories() {
+                    if (extraCard.classList.contains("hidden")) {
+                        extraCard.classList.remove("hidden");
+                        expandBtn.innerHTML = "See Less Categories";
+                    } else {
+                        extraCard.classList.add("hidden");
+                        expandBtn.innerHTML = "See All Categories";
+                    }
+                }
+            </script>
+        </div>
     </div>
-  </div>
 
-  <div class="categories">
-    <h2>Browse Jobs By Category</h2>
+    <div class="section">
+        <div class="content">
+            <h1>
+                Build and Boost<br /> your Great Profile
+            </h1>
 
-    <div class="cards-container">
-      <a href="#">
-        <div class="card">
-          <div class="anchor anchor-blue">
-            <img class="anchor-icon" src="./img/001-vector-design.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea.
+            </p>
+
+            <br />
+            <a class="btn" href="#">Register Now</a>
         </div>
-      </a>
-
-      <a href="#">
-        <div class="card">
-          <div class="anchor anchor-red">
-            <img class="anchor-icon" src="./img/002-flask.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+        <div class="poster">
+            <img src="./img/team.png" />
         </div>
-      </a>
+    </div>
 
-      <a href="#">
-        <div class="card">
-          <div class="anchor anchor-yellow">
-            <img class="anchor-icon" src="./img/004-desk.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+    <div class="section">
+        <div class="poster slide-poster">
+            <img src="./img/profile-yellow.png" />
         </div>
-      </a>
-
-      <a href="#">
-        <div class="card">
-          <div class="anchor anchor-yellow">
-            <img class="anchor-icon" src="./img/003-office-building.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+        <div class="poster slide-poster">
+            <img src="./img/profile-red.png" />
         </div>
-      </a>
-
-      <a href="#">
-        <div class="card">
-          <div class="anchor anchor-blue">
-            <img class="anchor-icon" src="./img/006-briefcase.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+        <div class="poster slide-poster">
+            <img src="./img/profile-blue.png" />
         </div>
-      </a>
+        <div class="content slide-content">
+            <h1>
+                What's our <br /> Jobseekers Said.
+            </h1>
 
-      <a href="#">
-        <div class="card">
-          <div class="anchor anchor-red">
-            <img class="anchor-icon" src="./img/005-clipboard.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+            <p>
+                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores"
+            </p>
+
+            <h2>Erik Shannon</h2>
+            <h3>React Developer</h3>
+
+            <div class="slide-btns">
+                <div class="move prev" onclick="plusSlides(-1)">&#x2039;</div>
+                <div class="move next" onclick="plusSlides(1)">&#x203A;</div>
+            </div>
         </div>
-      </a>
+        <div class="content slide-content">
+            <h1>
+                What's our <br /> Jobseekers Said.
+            </h1>
 
+            <p>
+                "Using, dreamjob, I got chance for the intership of the fyle. diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores"
+            </p>
 
-      <a href="#" id="more">
-        <div class="card hidden">
-          <div class="anchor anchor-red">
-            <img class="anchor-icon" src="./img/005-clipboard.svg" />
-          </div>
-          <h3>
-            Design & <br />
-            Development
-          </h3>
-          <p>
-            Design & Development loremdolor sit<br />
-            amet, consetetur sadipscing elitr, sed<br />
-            diam nonumy.
-          </p>
+            <h2>Gaurav Kumar</h2>
+            <h3>Front-end Developer</h3>
+
+            <div class="slide-btns">
+                <div class="move prev" onclick="plusSlides(-1)">&#x2039;</div>
+                <div class="move next" onclick="plusSlides(1)">&#x203A;</div>
+            </div>
         </div>
-      </a>
+        <div class="content slide-content">
+            <h1>
+                What's our <br /> Jobseekers Said.
+            </h1>
 
-      <div id="expand">
-        <a class="btn" onclick="toggleCategories()">See All Categories</a>
-      </div>
+            <p>
+                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores"
+            </p>
 
-      <script>
-        var extraCard = document.querySelector("#more > .card");
-        var expandBtn = document.querySelector("#expand > a");
+            <h2>Minda Shamson</h2>
+            <h3>Full-stack Developer</h3>
 
-        function toggleCategories() {
-          if (extraCard.classList.contains("hidden")) {
-            extraCard.classList.remove("hidden");
-            expandBtn.innerHTML = "See Less Categories";
-          } else {
-            extraCard.classList.add("hidden");
-            expandBtn.innerHTML = "See All Categories";
-          }
+            <div class="slide-btns">
+                <div class="move prev" onclick="plusSlides(-1)">&#x2039;</div>
+                <div class="move next" onclick="plusSlides(1)">&#x203A;</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section last-section">
+        <form class="subscribe">
+            <h1>Subscribe to Our Newsletter for the Weekly Updates.</h1>
+
+            <div class="input-box">
+                <input type="text" placeholder="Enter your email address here" name="email" />
+                <button type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
         }
-      </script>
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            var i;
+            var poster = document.getElementsByClassName("slide-poster");
+            var content = document.getElementsByClassName("slide-content");
+            if (n > poster.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = poster.length;
+            }
+            for (i = 0; i < poster.length; i++) {
+                poster[i].style.display = "none";
+            }
+            for (i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+            poster[slideIndex - 1].style.display = "block";
+            content[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+    <div class="footer">
+        <div class="footer-list">
+            <h3>Categories</h3>
+            <ul>
+                <li>
+                    <a href="#">Content Writer</a>
+                </li>
+                <li>
+                    <a href="#">Backend Developer</a>
+                </li>
+                <li>
+                    <a href="#">Creative Director</a>
+                </li>
+                <li>
+                    <a href="#">UI/UX Designer</a>
+                </li>
+            </ul>
+            <a href="#" class="highlight">More...</a>
+        </div>
+
+        <div class="footer-list">
+            <h3>Resources</h3>
+            <ul>
+                <li>
+                    <a href="#">Contact & Support</a>
+                </li>
+                <li>
+                    <a href="#">Application</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Careers</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-list">
+            <h3>Company</h3>
+            <ul>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#">Job Seminar</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">News</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-list">
+            <h3>Legals</h3>
+            <ul>
+                <li>
+                    <a href="#">Copyright</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#">Disclaimer</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="aboutus">
+            <h3>DREAMJOB.</h3>
+            <p>
+                Design & Development loremdolor sit amet, <br /> consetetur sadipscing elitr, sed diam nonumy.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="#"> <img src="./img/twitter.svg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img src="./img/gp.svg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img src="./img/fb.svg" /> </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-  </div>
-
-  <div class="section">
-    <div class="content">
-      <h1>Build and Boost<br />
-        your Great Profile
-      </h1>
-
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At
-        vero eos et accusam et justo duo dolores et ea.
-      </p>
-
-      <br />
-      <a class="btn" href="#">Register Now</a>
-    </div>
-    <div class="poster">
-      <img src="./img/team.png" />
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="poster slide-poster">
-      <img src="./img/profile-yellow.png">
-    </div>
-    <div class="poster slide-poster">
-      <img src="./img/profile-red.png">
-    </div>
-    <div class="poster slide-poster">
-      <img src="./img/profile-blue.png">
-    </div>
-    <div class="content slide-content">
-      <h1>What's our <br />
-        Jobseekers Said.
-      </h1>
-
-      <p>
-        "Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores"
-      </p>
-
-      <h2>Erik Shannon</h2>
-      <h3>React Developer</h3>
-
-      <div class="slide-btns">
-        <div class="move prev" onclick="plusSlides(-1)">&#x2039;</div>
-        <div class="move next" onclick="plusSlides(1)">&#x203A;</div>
-      </div>
-    </div>
-    <div class="content slide-content">
-      <h1>What's our <br />
-        Jobseekers Said.
-      </h1>
-
-      <p>
-        "Using, dreamjob, I got chance for the intership of
-        the fyle. diam nonumy eirmod tempor invidunt ut labore et dolore
-        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores"
-      </p>
-
-      <h2>Gaurav Kumar</h2>
-      <h3>Front-end Developer</h3>
-
-      <div class="slide-btns">
-        <div class="move prev" onclick="plusSlides(-1)">&#x2039;</div>
-        <div class="move next" onclick="plusSlides(1)">&#x203A;</div>
-      </div>
-    </div>
-    <div class="content slide-content">
-      <h1>What's our <br />
-        Jobseekers Said.
-      </h1>
-
-      <p>
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-        diam nonumy eirmod tempor invidunt ut labore et dolore
-        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores"
-      </p>
-
-      <h2>Minda Shamson</h2>
-      <h3>Full-stack Developer</h3>
-
-      <div class="slide-btns">
-        <div class="move prev" onclick="plusSlides(-1)">&#x2039;</div>
-        <div class="move next" onclick="plusSlides(1)">&#x203A;</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="section">
-
-    <form class="subscribe">
-      <h1>
-        Subscribe to Our Newsletter for the Weekly Updates.
-      </h1>
-
-      <div class="input-box">
-        <input type="text" placeholder="Enter your email address here" name="email">
-        <button type="submit">Subscribe</button>
-      </div>
-    </form>
-  </div>
-
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var poster = document.getElementsByClassName("slide-poster");
-      var content = document.getElementsByClassName("slide-content");
-      if (n > poster.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = poster.length }
-      for (i = 0; i < poster.length; i++) {
-        poster[i].style.display = "none";
-      }
-      for (i = 0; i < content.length; i++) {
-        content[i].style.display = "none";
-      }
-      poster[slideIndex - 1].style.display = "block";
-      content[slideIndex - 1].style.display = "block";
-    }
-  </script>
-
-
-
-  <div class="footer">
-
-    <div class="footer-list">
-      <h3> Categories </h3>
-      <ul>
-        <li>
-          <a href="#">Content Writer</a>
-        </li>
-        <li>
-          <a href="#">Backend Developer</a>
-        </li>
-        <li>
-          <a href="#">Creative Director</a>
-        </li>
-        <li>
-          <a href="#">UI/UX Designer</a>
-        </li>
-      </ul>
-      <a href="#" class="highlight">More...</a>
-    </div>
-
-    <div class="footer-list">
-      <h3> Resources </h3>
-      <ul>
-        <li>
-          <a href="#">Contact & Support</a>
-        </li>
-        <li>
-          <a href="#">Application</a>
-        </li>
-        <li>
-          <a href="#">FAQ</a>
-        </li>
-        <li>
-          <a href="#">Careers</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-list">
-      <h3> Company </h3>
-      <ul>
-        <li>
-          <a href="#">About us</a>
-        </li>
-        <li>
-          <a href="#">Job Seminar</a>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">News</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-list">
-      <h3> Legals </h3>
-      <ul>
-        <li>
-          <a href="#">Copyright</a>
-        </li>
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="#">Disclaimer</a>
-        </li>
-        <li>
-          <a href="#">Terms</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="aboutus">
-      <h3>DREAMJOB.</h3>
-      <p>
-        Design & Development loremdolor sit amet, <br />
-        consetetur sadipscing elitr, sed diam nonumy.
-      <ul>
-        <li>
-          <a href="#"> <img src="./img/twitter.svg"> </a>
-        </li>
-        <li>
-          <a href="#"> <img src="./img/gp.svg"> </a>
-        </li>
-        <li>
-          <a href="#"> <img src="./img/fb.svg"> </a>
-        </li>
-      </ul>
-      </p>
-    </div>
-  </div>
-
-  <div class="copyright">
-    Copyright © 2020 DREAMJOB. All rights reserved.
-  </div>
-
+    <div class="copyright">Copyright © 2020 DREAMJOB. All rights reserved.</div>
 </body>
-
-
-
-
-
 
 </html>
